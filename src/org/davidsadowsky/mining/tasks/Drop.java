@@ -1,7 +1,7 @@
-package org.dsadowsky.mining.tasks;
+package org.davidsadowsky.mining.tasks;
 
-import org.dsadowsky.mining.Autominer;
-import org.dsadowsky.mining.data.Location;
+import org.davidsadowsky.mining.Autominer;
+import org.davidsadowsky.mining.data.Location;
 import org.rspeer.runetek.adapter.component.Item;
 import org.rspeer.runetek.api.commons.Time;
 import org.rspeer.runetek.api.commons.math.Random;
@@ -14,7 +14,7 @@ public class Drop extends Task {
 
     @Override
     public boolean validate() {
-        return Inventory.isFull() && Autominer.location.equals(Location.POWERMINE);
+        return (Autominer.rock != null && Autominer.location != null) && Inventory.isFull() && Autominer.location.equals(Location.POWERMINE);
     }
 
     @Override
