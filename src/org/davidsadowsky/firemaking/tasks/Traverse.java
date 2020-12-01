@@ -41,7 +41,6 @@ public class Traverse extends Task {
 
             for (Position tile : tiles) {
                 if (SceneObjects.getFirstAt(tile) != null && Autofiremaker.FIREIDS.contains(SceneObjects.getFirstAt(tile).getId())) {
-                    Log.info(SceneObjects.getFirstAt(tile).getY());
                     laneData.put(tile.getY(), false);
                 }
             }
@@ -54,8 +53,6 @@ public class Traverse extends Task {
             }
             if (x != -1 && y != -1) {
                 Log.fine("Navigating to open lane.");
-                Log.info("x: " + x);
-                Log.info("y: " + y);
                 final Position pos = new Position(x, y, 0);
                 Movement.walkTo(pos);
                 Time.sleepUntil(new BooleanSupplier() {
