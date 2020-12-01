@@ -1,7 +1,6 @@
 package org.davidsadowsky.firemaking.tasks;
 
 import org.davidsadowsky.firemaking.Autofiremaker;
-import org.davidsadowsky.firemaking.data.TileComparator;
 import org.rspeer.runetek.api.commons.Time;
 import org.rspeer.runetek.api.commons.math.Random;
 import org.rspeer.runetek.api.component.tab.Inventory;
@@ -9,7 +8,6 @@ import org.rspeer.runetek.api.movement.Movement;
 import org.rspeer.runetek.api.movement.position.Position;
 import org.rspeer.runetek.api.scene.Players;
 import org.rspeer.runetek.api.scene.SceneObjects;
-import org.rspeer.runetek.providers.RSTile;
 import org.rspeer.script.task.Task;
 import org.rspeer.ui.Log;
 
