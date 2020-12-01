@@ -32,7 +32,7 @@ public class Traverse extends Task {
         } else {
             Log.info("Assessing accessible lanes...");
             final HashMap<Integer, Boolean> laneData = new HashMap<>();
-            int y = 0, x = 0;
+            int y = -1, x = -1;
             final List<Position> tiles = Autofiremaker.location.getLightingArea().getTiles();
 
             for (Position tile : tiles) {
