@@ -1,4 +1,4 @@
-package org.davidsadowsky.firemaking.data;
+package org.davidsadowsky.zammywinegrabber.data;
 
 import java.time.LocalTime;
 

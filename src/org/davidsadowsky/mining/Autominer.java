@@ -17,7 +17,7 @@ import java.awt.*;
 
 @ScriptMeta(developer = "David Sadowsky", name = "Autominer", desc = "Miner")
 
-public class Autominer extends TaskScript implements RenderListener {
+public class Autominer extends TaskScript {
 
     private static final Task[] TASKS = { new Banking(), new Drop(), new Traverse(), new Mine() };
 
@@ -29,11 +29,5 @@ public class Autominer extends TaskScript implements RenderListener {
     public void onStart() {
         new AutominerGUI().setVisible(true);
         submit(TASKS);
-    }
-
-    @Override
-    public void notify(RenderEvent renderEvent) {
-        Graphics g = renderEvent.getSource();
-        g.drawString("My animation: " + Players.getLocal().getAnimation(), 30,30);
     }
 }

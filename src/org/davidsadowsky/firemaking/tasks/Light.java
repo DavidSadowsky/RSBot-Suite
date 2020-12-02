@@ -14,7 +14,6 @@ import java.util.function.BooleanSupplier;
 public class Light extends Task {
     @Override
     public boolean validate() {
-        // Log.info(Autofiremaker.inOpenLane);
         return Autofiremaker.inOpenLane && Inventory.getCount() > 1;
     }
 
