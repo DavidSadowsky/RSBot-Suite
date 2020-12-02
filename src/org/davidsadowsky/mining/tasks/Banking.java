@@ -53,7 +53,7 @@ public class Banking extends Task {
                 Bank.open();
             }
         }
-        if(LocalTime.now().getSecond() - Autominer.time.getStartTime().getSecond() > Autominer.time.getSeconds()) {
+        if(Autominer.time.getSeconds() != -1 && LocalTime.now().getSecond() - Autominer.time.getStartTime().getSecond() > Autominer.time.getSeconds()) {
             Log.info("Time limit of " + Autominer.time.getTime() + " reached. Exiting script.");
             Game.logout();
             return -1;

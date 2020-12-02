@@ -50,7 +50,7 @@ public class Banking extends Task {
         } else {
             Bank.open();
         }
-        if (LocalTime.now().getSecond() - Autofiremaker.time.getStartTime().getSecond() > Autofiremaker.time.getSeconds()) {
+        if (Autofiremaker.time.getSeconds() != -1 && LocalTime.now().getSecond() - Autofiremaker.time.getStartTime().getSecond() > Autofiremaker.time.getSeconds()) {
             Log.fine("Time limit of " + Autofiremaker.time.getTime() + " reached. Exiting script.");
             Game.logout();
             return -1;

@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="Copper-Tin-Powerminer:jar">
     <output-path>$USER_HOME$/Documents/RSPeer/scripts</output-path>
     <root id="archive" name="Autominer.jar">
-      <element id="module-output" name="Autominer" />
+      <element id="module-output" name="RSPeer Scripts" />
     </root>
   </artifact>
 </component>

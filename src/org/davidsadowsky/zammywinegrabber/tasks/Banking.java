@@ -65,11 +65,6 @@ public class Banking extends Task {
         } else {
             Bank.open();
         }
-        if (LocalTime.now().getSecond() - Zammywinegrabber.time.getStartTime().getSecond() > Zammywinegrabber.time.getSeconds()) {
-            Log.fine("Time limit of " + Zammywinegrabber.time.getTime() + " reached. Exiting script.");
-            Game.logout();
-            return -1;
-        }
         return Random.nextInt(400, 600);
     }
 }

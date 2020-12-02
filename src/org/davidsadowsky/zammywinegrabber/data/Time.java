@@ -10,7 +10,8 @@ public enum Time {
     FIVEHOURS("5 hours", 18000),
     SIXHOURS("6 hours", 21600),
     SEVENHOURS("7 hours", 25200),
-    EIGHTHOURS("8 hours", 28800);
+    EIGHTHOURS("8 hours", 28800),
+    NOLIMIT("Infinite", -1);
 
     private final String time;
     private final long seconds;
@@ -24,5 +25,6 @@ public enum Time {
 
     public String getTime() { return time; }
     public long getSeconds() { return seconds; }
+
     public LocalTime getStartTime() { return startTime; }
 }

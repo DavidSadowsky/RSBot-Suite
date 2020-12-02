@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Autominer.iml" filepath="$PROJECT_DIR$/Autominer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RSPeer Scripts.iml" filepath="$PROJECT_DIR$/RSPeer Scripts.iml" />
     </modules>
   </component>
 </project>

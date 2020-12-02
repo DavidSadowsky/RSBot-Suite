@@ -6,7 +6,6 @@ import org.davidsadowsky.zammywinegrabber.tasks.Banking;
 import org.davidsadowsky.zammywinegrabber.tasks.Telegrab;
 import org.davidsadowsky.zammywinegrabber.tasks.Traverse;
 import org.rspeer.runetek.adapter.component.Item;
-import org.rspeer.runetek.api.component.tab.Spell;
 import org.rspeer.script.ScriptMeta;
 import org.rspeer.script.task.Task;
 import org.rspeer.script.task.TaskScript;
