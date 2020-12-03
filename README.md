@@ -1,0 +1,2 @@
+# Autominer
+AIO Autominer
