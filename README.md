@@ -1,7 +1,7 @@
 # AIO Autominer
 
-[![HitCount](http://hits.dwyl.com/DavidSadowsky/Autominer.svg)](http://hits.dwyl.com/DavidSadowsky/Autominer))
-![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
+[![HitCount](http://hits.dwyl.com/DavidSadowsky/Autominer.svg)](http://hits.dwyl.com/DavidSadowsky/Autominer)
+![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)
 
 All-In-One Autominer for Old School Runescape using Java and the RSPeer API.
 
