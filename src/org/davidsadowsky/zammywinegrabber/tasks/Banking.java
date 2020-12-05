@@ -53,7 +53,7 @@ public class Banking extends Task {
                             return Inventory.contains(item);
                         }
                     }, 2000);
-                    Time.sleep(200);
+                    Time.sleep(200, 300);
                 }
             }
 
