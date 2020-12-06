@@ -14,14 +14,14 @@ Inside `org.yourname`, clone this repository. Then, build module `project name` 
 
 ## Support
 
-Currently supported scripts:
+**Currently supported scripts**
 
 - Mining
 - Fireamking
 - Zamorak Wine Telegrabber
 - Smelting
 
-In progress:
+**In progress**
 
 - Tutorial island
 - Woodcutting
@@ -33,7 +33,7 @@ In progress:
 - Fishing
 - Smithing
 
-Misc upgrades coming soon:
+**Misc upgrades coming soon**
 
 - Paint utility for experience tracking
 - Bug fixes for the time utility
