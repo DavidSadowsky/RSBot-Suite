@@ -6,7 +6,7 @@ Collection of all my scripts for Old School Runescape using Java and the RSPeer 
 
 ## Setup
 
-Follow this [guide](https://docs.rspeer.org/docs/setting-up-dev-environment) on the RSPeer website to set up your development environment.
+Follow [this guide](https://docs.rspeer.org/docs/setting-up-dev-environment) on the RSPeer website to set up your development environment.
 
 Create a new package called `org.yourname` or something along those lines. This package will hold all of your scripts and it's not necessary if you're only going to be using one script; however, if you plan on downloading/adding more, this is the structure that I like to use.
 
