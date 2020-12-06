@@ -1,8 +1,8 @@
-# AIO Autominer
+# OSRS Bot Suite
 
 [![HitCount](http://hits.dwyl.com/DavidSadowsky/Autominer.svg)](http://hits.dwyl.com/DavidSadowsky/RSBot-Suite)
 
-All-In-One Autominer for Old School Runescape using Java and the RSPeer API.
+Collection of all my scripts for Old School Runescape using Java and the RSPeer API.
 
 ## Setup
 
@@ -14,10 +14,28 @@ Inside `org.yourname`, clone this repository. Then, build module `project name` 
 
 ## Support
 
-Currently supported options:
+Currently supported scripts:
 
-- Lumbrige Swamp - Copper/Tin/Copper & Tin
-- Rimmington - Iron/Gold/Clay
-- Powermine (any location) - Copper/Tin/Copper & Tin/Iron/Gold/Clay
+- Mining
+- Fireamking
+- Zamorak Wine Telegrabber
+- Smelting
 
-Support for more locations and ores will be added in future releases.
+In progress:
+
+- Tutorial island
+- Woodcutting
+- Muling
+- Magic
+- Combat
+- Questing (Romeo & Juliet, Ernest the Chicken, Cooks Assistant, Sheep Shearer)
+- Cooking
+- Fishing
+- Smithing
+
+Misc upgrades coming soon:
+
+- Paint utility for experience tracking
+- Bug fixes for the time utility
+- Improved GUIs
+- Improved randomization on mining & smelting scripts
