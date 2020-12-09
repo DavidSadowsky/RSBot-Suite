@@ -16,7 +16,7 @@ import org.rspeer.script.task.TaskScript;
 
 import java.util.EventListener;
 
-@ScriptMeta(developer = "David Sadowsky", name = "Autosmelter", desc = "Smelter")
+@ScriptMeta(developer = "David Sadowsky", name = "DAS Smelter", desc = "Smelter")
 
 public class Autosmelter extends TaskScript implements ChatMessageListener {
 

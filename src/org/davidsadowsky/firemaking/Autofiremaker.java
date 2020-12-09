@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-@ScriptMeta(developer = "David Sadowsky", name = "Autofiremaker", desc = "Firemaker")
+@ScriptMeta(developer = "David Sadowsky", name = "DAS Firemaker", desc = "Firemaker")
 
 public class Autofiremaker extends TaskScript implements ChatMessageListener {
 

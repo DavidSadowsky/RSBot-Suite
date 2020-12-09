@@ -15,7 +15,7 @@ import org.rspeer.script.task.TaskScript;
 
 import java.awt.*;
 
-@ScriptMeta(developer = "David Sadowsky", name = "Autominer", desc = "Miner")
+@ScriptMeta(developer = "David Sadowsky", name = "DAS Miner", desc = "Miner")
 
 public class Autominer extends TaskScript {
 
