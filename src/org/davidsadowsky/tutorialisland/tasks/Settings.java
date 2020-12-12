@@ -1,6 +1,7 @@
 package org.davidsadowsky.tutorialisland.tasks;
 
 import org.davidsadowsky.tutorialisland.Autotutorialisland;
+import org.davidsadowsky.tutorialisland.data.Location;
 import org.rspeer.runetek.adapter.scene.Npc;
 import org.rspeer.runetek.api.Game;
 import org.rspeer.runetek.api.commons.Time;

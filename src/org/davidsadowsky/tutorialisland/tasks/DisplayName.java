@@ -28,7 +28,7 @@ public class DisplayName extends Task {
 
     @Override
     public boolean validate() {
-        return (Autotutorialisland.location != null) && Autotutorialisland.location.getName().equals("Display Name") && Players.getLocal() != null && Game.isLoggedIn() && !Autotutorialisland.isCharacterDesignComplete; //&& Autotutorialisland.location.getPrimaryArea().contains(Players.getLocal());
+        return (Autotutorialisland.location != null) && Autotutorialisland.location.getName().equals("Display Name") && Players.getLocal() != null && Game.isLoggedIn() && !Autotutorialisland.isCharacterDesignComplete && Autotutorialisland.location.getPrimaryArea().contains(Players.getLocal());
     }
 
     @Override
