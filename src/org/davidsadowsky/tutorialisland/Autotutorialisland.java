@@ -11,15 +11,16 @@ import java.util.ArrayList;
 
 public class Autotutorialisland extends TaskScript {
 
-    private static final Task[] TASKS = { new DisplayName(), new Settings(), new Fishing(), new Woodcutting(), new Firemaking(), new Cooking(), new Traverse()};
+    private static final Task[] TASKS = { new DisplayName(), new Settings(), new Fishing(), new Woodcutting(), new Firemaking(), new Cooking(), new Traverse(), new CookBread() };
 
     public static boolean isCharacterDesignComplete = true; // TODO: debug, change this to false
     public static boolean isSettingsComplete = true; // TODO: debug, change this to false
-    public static boolean isFishingComplete = false;
-    public static boolean isWoodcuttingComplete = false;
-    public static boolean isFiremakingComplete = false;
-    public static boolean isCookingComplete = false;
-    public static Location location = Location.START;
+    public static boolean isFishingComplete = true; // TODO: debug, change this to false
+    public static boolean isWoodcuttingComplete = true; // TODO: debug, change this to false
+    public static boolean isFiremakingComplete = true; // TODO: debug, change this to false
+    public static boolean isCookingComplete = true; // TODO: debug, change this to false
+    public static boolean isRangeComplete = false;
+    public static Location location = Location.FISHING; // TODO: debug, change this to START
 
     @Override
     public void onStart() {

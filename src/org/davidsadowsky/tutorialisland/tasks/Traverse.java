@@ -15,20 +15,28 @@ import java.util.List;
 public class Traverse extends Task {
     @Override
     public boolean validate() {
-        return (Autotutorialisland.location != null) && traverseToFishingArea();
+        return (Autotutorialisland.location != null) && (traverseToFishingArea() || traverseToCookingArea());
     }
 
     @Override
     public int execute() {
         if(traverseToFishingArea()) {
             Autotutorialisland.location = Location.FISHING;
-            List<Position> tiles = Autotutorialisland.location.getSecondaryArea().getTiles();
-            Movement.walkTo(tiles.get(Random.nextInt(0, tiles.size() - 1)));
+            Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
+        }
+        if(traverseToCookingArea()) {
+            Log.info("test");
+            Autotutorialisland.location = Location.COOKING;
+            Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
         }
         return Random.nextInt(400,600);
     }
 
     private boolean traverseToFishingArea() {
         return (Autotutorialisland.location.getName().equals("Display Name")) && Autotutorialisland.location.getPrimaryArea().contains(Players.getLocal()) && Autotutorialisland.isSettingsComplete;
+    }
+
+    private boolean traverseToCookingArea() {
+        return (Autotutorialisland.location.getName().equals("Fishing Area")) && Autotutorialisland.location.getPrimaryArea().contains(Players.getLocal()) && Autotutorialisland.isCookingComplete;
     }
 }
