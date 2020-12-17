@@ -38,9 +38,12 @@ public enum Logs {
         }
     }
 
-    public String getName() { return name; };
-    public int getLogID() { return logID; };
-    public int getRequiredLevel() { return requiredLevel; };
+    public String getName() { return name; }
+
+    public int getLogID() { return logID; }
+
+    public int getRequiredLevel() { return requiredLevel; }
+
     public boolean isAccessible() {
         return Skills.getCurrentLevel(Skill.FIREMAKING) >= requiredLevel;
     }

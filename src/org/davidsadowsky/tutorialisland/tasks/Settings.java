@@ -1,9 +1,7 @@
 package org.davidsadowsky.tutorialisland.tasks;
 
 import org.davidsadowsky.tutorialisland.Autotutorialisland;
-import org.davidsadowsky.tutorialisland.data.Location;
 import org.rspeer.runetek.adapter.scene.Npc;
-import org.rspeer.runetek.api.Game;
 import org.rspeer.runetek.api.commons.Time;
 import org.rspeer.runetek.api.commons.math.Random;
 import org.rspeer.runetek.api.component.Dialog;
@@ -29,7 +27,7 @@ public class Settings extends Task {
         Time.sleepUntil(new BooleanSupplier() {
             @Override
             public boolean getAsBoolean() {
-                return Interfaces.getComponent(679,68) == null;
+                return Interfaces.getComponent(679, 68) == null;
             }
         }, 10000);
 
@@ -47,21 +45,20 @@ public class Settings extends Task {
             }
         }, 10000);
 
-        while(Dialog.canContinue() || Dialog.isViewingChatOptions()) {
-            if(Dialog.isViewingChatOptions()) {
+        while (Dialog.canContinue() || Dialog.isViewingChatOptions()) {
+            if (Dialog.isViewingChatOptions()) {
                 Dialog.process(0);
-            }
-            else Dialog.processContinue();
+            } else Dialog.processContinue();
             Time.sleepUntil(new BooleanSupplier() {
                 @Override
                 public boolean getAsBoolean() {
                     return Dialog.canContinue() || Dialog.isViewingChatOptions();
                 }
-            },2500);
+            }, 2500);
         }
 
         Log.info("Interacting with settings tab");
-        Interfaces.getComponent(164,41).interact(ActionOpcodes.INTERFACE_ACTION);
+        Interfaces.getComponent(164, 41).interact(ActionOpcodes.INTERFACE_ACTION);
         Time.sleepUntil(new BooleanSupplier() {
             @Override
             public boolean getAsBoolean() {
@@ -76,9 +73,9 @@ public class Settings extends Task {
             public boolean getAsBoolean() {
                 return Dialog.canContinue();
             }
-        },10000);
+        }, 10000);
 
-        while(Dialog.canContinue()) {
+        while (Dialog.canContinue()) {
             Dialog.processContinue();
             Time.sleepUntil(new BooleanSupplier() {
                 @Override
@@ -90,6 +87,6 @@ public class Settings extends Task {
 
         Log.fine("Room 1 complete");
         Autotutorialisland.isSettingsComplete = true;
-        return Random.nextInt(400,600);
+        return Random.nextInt(400, 600);
     }
 }

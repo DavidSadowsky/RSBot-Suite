@@ -1,18 +1,11 @@
 package org.davidsadowsky.tutorialisland.tasks;
 
-import org.davidsadowsky.firemaking.Autofiremaker;
 import org.davidsadowsky.tutorialisland.Autotutorialisland;
 import org.rspeer.runetek.adapter.component.Item;
-import org.rspeer.runetek.adapter.scene.Npc;
-import org.rspeer.runetek.adapter.scene.SceneObject;
 import org.rspeer.runetek.api.commons.Time;
 import org.rspeer.runetek.api.commons.math.Random;
-import org.rspeer.runetek.api.component.Dialog;
 import org.rspeer.runetek.api.component.tab.Inventory;
-import org.rspeer.runetek.api.movement.Movement;
-import org.rspeer.runetek.api.scene.Npcs;
 import org.rspeer.runetek.api.scene.Players;
-import org.rspeer.runetek.api.scene.SceneObjects;
 import org.rspeer.script.task.Task;
 import org.rspeer.ui.Log;
 
@@ -30,20 +23,21 @@ public class Firemaking extends Task {
         Log.info("Beginning firemaking phase");
         Item logs = Inventory.getFirst(item -> item.getName().contains("Logs"));
         Item tinderbox = Inventory.getFirst(item -> item.getName().contains("Tinder"));
-        while(logs == null || tinderbox == null) {
+        while (logs == null || tinderbox == null) {
             logs = Inventory.getFirst(item -> item.getName().contains("Logs"));
             tinderbox = Inventory.getFirst(item -> item.getName().contains("Tinder"));
         }
-        if(logs != null && tinderbox != null && !Players.getLocal().isAnimating() && !Players.getLocal().isMoving()) {
+        if (logs != null && tinderbox != null && !Players.getLocal().isAnimating() && !Players.getLocal().isMoving()) {
             logs.interact("Use");
-            Time.sleep(250,400);
+            Time.sleep(250, 400);
             tinderbox.interact("Use");
             Time.sleepUntil(new BooleanSupplier() {
                 @Override
                 public boolean getAsBoolean() {
                     return Players.getLocal().isAnimating();
                 }
-            }, 10000);Time.sleepUntil(new BooleanSupplier() {
+            }, 10000);
+            Time.sleepUntil(new BooleanSupplier() {
                 @Override
                 public boolean getAsBoolean() {
                     return !Players.getLocal().isAnimating();
@@ -52,6 +46,6 @@ public class Firemaking extends Task {
         }
         Autotutorialisland.isFiremakingComplete = true;
         Log.fine("Finished firemaking phase");
-        return Random.nextInt(400,600);
+        return Random.nextInt(400, 600);
     }
 }

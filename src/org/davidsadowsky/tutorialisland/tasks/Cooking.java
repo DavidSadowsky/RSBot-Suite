@@ -32,13 +32,13 @@ public class Cooking extends Task {
         Log.info("Beginning cooking phase");
         Item shrimp = Inventory.getFirst(item -> item.getName().contains("shrimps"));
         SceneObject fire = SceneObjects.getNearest(26185);
-        while(shrimp == null || fire == null) {
+        while (shrimp == null || fire == null) {
             shrimp = Inventory.getFirst(2514);
             fire = SceneObjects.getNearest(26185);
         }
-        if(shrimp != null && fire != null && !Players.getLocal().isAnimating() && !Players.getLocal().isMoving()) {
+        if (shrimp != null && fire != null && !Players.getLocal().isAnimating() && !Players.getLocal().isMoving()) {
             shrimp.interact("Use");
-            Time.sleep(250,400);
+            Time.sleep(250, 400);
             fire.interact(ActionOpcodes.ITEM_ON_OBJECT);
             Time.sleepUntil(new BooleanSupplier() {
                 @Override
@@ -55,6 +55,6 @@ public class Cooking extends Task {
         }
         Autotutorialisland.isCookingComplete = true;
         Log.fine("Finished cooking phase");
-        return Random.nextInt(400,600);
+        return Random.nextInt(400, 600);
     }
 }

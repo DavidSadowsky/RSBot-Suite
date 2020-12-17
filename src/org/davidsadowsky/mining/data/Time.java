@@ -17,7 +17,7 @@ public enum Time {
     private final long seconds;
     private final LocalTime startTime;
 
-    private Time(String time, long seconds) {
+    Time(String time, long seconds) {
         this.time = time;
         this.seconds = seconds;
         this.startTime = LocalTime.now();

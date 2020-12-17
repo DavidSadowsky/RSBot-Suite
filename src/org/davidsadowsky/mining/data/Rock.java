@@ -14,15 +14,18 @@ public enum Rock {
     private final String name;
     private final int requiredLevel;
 
-    private Rock(int[] rockIds, String oreName, int requiredLevel) {
+    Rock(int[] rockIds, String oreName, int requiredLevel) {
         this.rockIds = rockIds;
         this.name = oreName;
         this.requiredLevel = requiredLevel;
     }
 
-    public int[] getRockIds() { return rockIds; };
-    public String getName() { return name; };
-    public int getRequiredLevel() { return requiredLevel; };
+    public int[] getRockIds() { return rockIds; }
+
+    public String getName() { return name; }
+
+    public int getRequiredLevel() { return requiredLevel; }
+
     public boolean isAccessible() {
         return Skills.getCurrentLevel(Skill.MINING) >= requiredLevel;
     }

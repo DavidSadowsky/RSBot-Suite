@@ -10,9 +10,9 @@ import java.awt.event.ActionListener;
 
 public class ZammywinegrabberGUI extends JFrame {
 
-    private JComboBox locationComboBox;
-    private JComboBox logoutComboBox;
-    private JButton initiate;
+    private final JComboBox locationComboBox;
+    private final JComboBox logoutComboBox;
+    private final JButton initiate;
 
     public ZammywinegrabberGUI() {
         super("Autofiremaker Configuration");

@@ -12,10 +12,10 @@ import java.awt.event.ActionListener;
 
 public class AutosmelterGUI extends JFrame {
 
-    private JComboBox barComboBox;
-    private JComboBox locationComboBox;
-    private JComboBox timeComboBox;
-    private JButton initiate;
+    private final JComboBox barComboBox;
+    private final JComboBox locationComboBox;
+    private final JComboBox timeComboBox;
+    private final JButton initiate;
 
     public AutosmelterGUI() {
         super("Autosmelter Configuration");

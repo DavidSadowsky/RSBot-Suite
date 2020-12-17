@@ -11,10 +11,10 @@ import java.awt.event.ActionListener;
 
 public class AutofiremakerGUI extends JFrame {
 
-    private JComboBox logComboBox;
-    private JComboBox locationComboBox;
-    private JComboBox logoutComboBox;
-    private JButton initiate;
+    private final JComboBox logComboBox;
+    private final JComboBox locationComboBox;
+    private final JComboBox logoutComboBox;
+    private final JButton initiate;
 
     public AutofiremakerGUI() {
         super("Autofiremaker Configuration");

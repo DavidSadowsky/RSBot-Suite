@@ -1,7 +1,6 @@
 package org.davidsadowsky.tutorialisland.tasks;
 
 import org.davidsadowsky.tutorialisland.Autotutorialisland;
-import org.davidsadowsky.tutorialisland.data.Location;
 import org.rspeer.runetek.adapter.scene.Npc;
 import org.rspeer.runetek.api.commons.Time;
 import org.rspeer.runetek.api.commons.math.Random;
@@ -27,7 +26,7 @@ public class Fishing extends Task {
     @Override
     public int execute() {
         Npc survivalExpert = Npcs.getNearest(8503);
-        while(survivalExpert == null) {
+        while (survivalExpert == null) {
             survivalExpert = Npcs.getNearest(8503);
         }
 
@@ -40,18 +39,18 @@ public class Fishing extends Task {
             }
         }, 2000);
 
-        while(Dialog.canContinue()) {
+        while (Dialog.canContinue()) {
             Dialog.processContinue();
             Time.sleepUntil(new BooleanSupplier() {
                 @Override
                 public boolean getAsBoolean() {
                     return Dialog.canContinue();
                 }
-            },2000);
+            }, 2000);
         }
 
         Log.info("Interacting with inventory tab");
-        Interfaces.getComponent(164,56).interact(ActionOpcodes.INTERFACE_ACTION);
+        Interfaces.getComponent(164, 56).interact(ActionOpcodes.INTERFACE_ACTION);
         Time.sleepUntil(new BooleanSupplier() {
             @Override
             public boolean getAsBoolean() {
@@ -61,7 +60,7 @@ public class Fishing extends Task {
 
         Log.info("Fishing");
         Npc fishingSpot = null;
-        while(fishingSpot == null) {
+        while (fishingSpot == null) {
             fishingSpot = Npcs.getNearest(3317);
         }
         fishingSpot.interact(ActionOpcodes.NPC_ACTION_0);
@@ -93,10 +92,10 @@ public class Fishing extends Task {
             public boolean getAsBoolean() {
                 return Dialog.canContinue();
             }
-        },2000);
+        }, 2000);
 
         Log.fine("Fishing phase complete");
         Autotutorialisland.isFishingComplete = true;
-        return Random.nextInt(400,600);
+        return Random.nextInt(400, 600);
     }
 }

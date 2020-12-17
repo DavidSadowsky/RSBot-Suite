@@ -3,14 +3,10 @@ package org.davidsadowsky.tutorialisland.tasks;
 import org.davidsadowsky.tutorialisland.Autotutorialisland;
 import org.davidsadowsky.tutorialisland.data.Location;
 import org.rspeer.runetek.api.commons.math.Random;
-import org.rspeer.runetek.api.component.tab.Inventory;
 import org.rspeer.runetek.api.movement.Movement;
-import org.rspeer.runetek.api.movement.position.Position;
 import org.rspeer.runetek.api.scene.Players;
 import org.rspeer.script.task.Task;
 import org.rspeer.ui.Log;
-
-import java.util.List;
 
 public class Traverse extends Task {
     @Override
@@ -20,16 +16,16 @@ public class Traverse extends Task {
 
     @Override
     public int execute() {
-        if(traverseToFishingArea()) {
+        if (traverseToFishingArea()) {
             Autotutorialisland.location = Location.FISHING;
             Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
         }
-        if(traverseToCookingArea()) {
+        if (traverseToCookingArea()) {
             Log.info("test");
             Autotutorialisland.location = Location.COOKING;
             Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
         }
-        return Random.nextInt(400,600);
+        return Random.nextInt(400, 600);
     }
 
     private boolean traverseToFishingArea() {

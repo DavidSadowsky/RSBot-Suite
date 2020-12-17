@@ -12,10 +12,10 @@ import java.awt.event.ActionListener;
 
 public class AutominerGUI extends JFrame {
 
-    private JComboBox rockComboBox;
-    private JComboBox locationComboBox;
-    private JComboBox logoutComboBox;
-    private JButton initiate;
+    private final JComboBox rockComboBox;
+    private final JComboBox locationComboBox;
+    private final JComboBox logoutComboBox;
+    private final JButton initiate;
 
     public AutominerGUI() {
         super("Autominer Configuration");

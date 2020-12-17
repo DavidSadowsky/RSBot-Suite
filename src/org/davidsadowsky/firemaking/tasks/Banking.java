@@ -30,7 +30,7 @@ public class Banking extends Task {
             Autofiremaker.assessLogType = false;
         }
         if (Bank.isOpen()) {
-            Bank.depositAllExcept(new int[]{Autofiremaker.TINDERBOX_ID, Autofiremaker.logs.getLogID()});
+            Bank.depositAllExcept(Autofiremaker.TINDERBOX_ID, Autofiremaker.logs.getLogID());
             while (!Inventory.contains(Autofiremaker.TINDERBOX_PREDICATE)) {
                 Log.info("Withdrawing tinderbox");
                 Bank.withdraw(Autofiremaker.TINDERBOX_PREDICATE, 1);
