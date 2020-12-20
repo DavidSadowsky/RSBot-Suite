@@ -11,7 +11,7 @@ import org.rspeer.ui.Log;
 public class Traverse extends Task {
     @Override
     public boolean validate() {
-        return (Autotutorialisland.location != null) && (traverseToFishingArea() || traverseToCookingArea());
+        return (Autotutorialisland.location != null) && (traverseToFishingArea() || traverseToCookingArea() || traverseToQuestGuide());
     }
 
     @Override
@@ -20,9 +20,12 @@ public class Traverse extends Task {
             Autotutorialisland.location = Location.FISHING;
             Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
         }
-        if (traverseToCookingArea()) {
-            Log.info("test");
+        else if (traverseToCookingArea()) {
             Autotutorialisland.location = Location.COOKING;
+            Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
+        }
+        else if (traverseToQuestGuide()) {
+            Autotutorialisland.location = Location.QUEST;
             Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
         }
         return Random.nextInt(400, 600);
@@ -34,5 +37,9 @@ public class Traverse extends Task {
 
     private boolean traverseToCookingArea() {
         return (Autotutorialisland.location.getName().equals("Fishing Area")) && Autotutorialisland.location.getPrimaryArea().contains(Players.getLocal()) && Autotutorialisland.isCookingComplete;
+    }
+
+    private boolean traverseToQuestGuide() {
+        return (Autotutorialisland.location.getName().equals("Cooking Area")) && Autotutorialisland.location.getSecondaryArea().contains(Players.getLocal()) && Autotutorialisland.isRangeComplete;
     }
 }
