@@ -11,7 +11,7 @@ import org.rspeer.ui.Log;
 public class Traverse extends Task {
     @Override
     public boolean validate() {
-        return (Autotutorialisland.location != null) && (traverseToFishingArea() || traverseToCookingArea() || traverseToQuestGuide());
+        return (Autotutorialisland.location != null) && (traverseToFishingArea() || traverseToCookingArea() || traverseToQuestGuide() || traverseToMine());
     }
 
     @Override
@@ -28,6 +28,10 @@ public class Traverse extends Task {
             Autotutorialisland.location = Location.QUEST;
             Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
         }
+        else if(traverseToMine()) {
+            Autotutorialisland.location = Location.MINING;
+            Movement.walkTo(Autotutorialisland.location.getSecondaryArea().getCenter());
+        }
         return Random.nextInt(400, 600);
     }
 
@@ -41,5 +45,9 @@ public class Traverse extends Task {
 
     private boolean traverseToQuestGuide() {
         return (Autotutorialisland.location.getName().equals("Cooking Area")) && Autotutorialisland.location.getSecondaryArea().contains(Players.getLocal()) && Autotutorialisland.isRangeComplete;
+    }
+
+    private boolean traverseToMine() {
+        return (Autotutorialisland.location.getName().equals("Quest Guide Area")) && Autotutorialisland.location.getSecondaryArea().contains(Players.getLocal()) && Autotutorialisland.isQuestGuideComplete;
     }
 }

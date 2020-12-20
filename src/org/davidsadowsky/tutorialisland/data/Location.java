@@ -9,7 +9,7 @@ public enum Location {
     FISHING("Fishing Area", Area.rectangular(new Position(3105, 3091, 0), new Position(3098,3099,0)), Area.rectangular(new Position(3104,3096,0), new Position(3099,3092,0))),
     COOKING("Cooking Area", Area.rectangular(new Position(3078, 3083, 0), new Position(3074,3091,0)), Area.rectangular(new Position(3075,3082,0), new Position(3078,3085,0))),
     QUEST("Quest Guide Area", Area.rectangular(new Position(3088, 3125, 0), new Position(3083,3120,0)), Area.rectangular(new Position(3088,3125,0), new Position(3083,3120,0))),
-    MINING("Mining Area", Area.rectangular(new Position(3210, 3220, 2), new Position(3208,3217,2)), Area.rectangular(new Position(3225,3255,0), new Position(3228,3253,0))),
+    MINING("Mining Area", Area.rectangular(new Position(3074, 9507, 0), new Position(3087,9498,0)), Area.rectangular(new Position(3083,9500,0), new Position(3077,9497,0))),
     COMBAT("Combat Area", Area.rectangular(new Position(3210, 3220, 2), new Position(3208,3217,2)), Area.rectangular(new Position(3225,3255,0), new Position(3228,3253,0))),
     BANK("Bank Area", Area.rectangular(new Position(3210, 3220, 2), new Position(3208,3217,2)), Area.rectangular(new Position(3225,3255,0), new Position(3228,3253,0))),
     PRAYER("Prayer Area", Area.rectangular(new Position(3210, 3220, 2), new Position(3208,3217,2)), Area.rectangular(new Position(3225,3255,0), new Position(3228,3253,0))),
