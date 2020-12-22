@@ -30,6 +30,7 @@ public class Settings extends Task {
                 return Interfaces.getComponent(679, 68) == null;
             }
         }, 10000);
+        Time.sleep(1000,2000);
 
         Npc gielinorGuide = Npcs.getNearest(3308);
         while (gielinorGuide == null) {
@@ -47,7 +48,7 @@ public class Settings extends Task {
 
         while (Dialog.canContinue() || Dialog.isViewingChatOptions()) {
             if (Dialog.isViewingChatOptions()) {
-                Dialog.process(0);
+                Dialog.process(Random.nextInt(2));
             } else Dialog.processContinue();
             Time.sleepUntil(new BooleanSupplier() {
                 @Override

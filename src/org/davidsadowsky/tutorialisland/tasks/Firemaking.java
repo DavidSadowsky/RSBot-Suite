@@ -15,7 +15,7 @@ public class Firemaking extends Task {
 
     @Override
     public boolean validate() {
-        return (Autotutorialisland.location != null) && Autotutorialisland.location.getName().equals("Fishing Area") && Autotutorialisland.location.getSecondaryArea().contains(Players.getLocal()) && Autotutorialisland.isWoodcuttingComplete && !Autotutorialisland.isFiremakingComplete;
+        return (Autotutorialisland.location != null) && Autotutorialisland.location.getName().equals("Fishing Area") && Autotutorialisland.location.getPrimaryArea().contains(Players.getLocal()) && Autotutorialisland.isWoodcuttingComplete && !Autotutorialisland.isFiremakingComplete;
     }
 
     @Override
